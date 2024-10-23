@@ -1,0 +1,95 @@
+﻿@model IEnumerable<SeanceUpdate.Models.OperationG10>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OperDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperLibelle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperMontDebit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperMontCredit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperSolde)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperBeneficiaire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperExecutant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperObserva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NatCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Compte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ordonateur)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperLibelle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperMontDebit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperMontCredit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperSolde)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperBeneficiaire)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperExecutant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperObserva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NatCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Compte.CptDesignation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ordonateur.OrdNom)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.OperRef">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.OperRef">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.OperRef">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

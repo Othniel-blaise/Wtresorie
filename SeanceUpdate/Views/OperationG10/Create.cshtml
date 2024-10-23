@@ -1,0 +1,81 @@
+﻿@model SeanceUpdate.Models.OperationG10
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>OperationG10</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OperDate" class="control-label"></label>
+                <input asp-for="OperDate" class="form-control" />
+                <span asp-validation-for="OperDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OperLibelle" class="control-label"></label>
+                <input asp-for="OperLibelle" class="form-control" />
+                <span asp-validation-for="OperLibelle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OperMontDebit" class="control-label"></label>
+                <input asp-for="OperMontDebit" class="form-control" />
+                <span asp-validation-for="OperMontDebit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OperMontCredit" class="control-label"></label>
+                <input asp-for="OperMontCredit" class="form-control" />
+                <span asp-validation-for="OperMontCredit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OperSolde" class="control-label"></label>
+                <input asp-for="OperSolde" class="form-control" />
+                <span asp-validation-for="OperSolde" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OperBeneficiaire" class="control-label"></label>
+                <input asp-for="OperBeneficiaire" class="form-control" />
+                <span asp-validation-for="OperBeneficiaire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OperExecutant" class="control-label"></label>
+                <input asp-for="OperExecutant" class="form-control" />
+                <span asp-validation-for="OperExecutant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OperObserva" class="control-label"></label>
+                <input asp-for="OperObserva" class="form-control" />
+                <span asp-validation-for="OperObserva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NatCode" class="control-label"></label>
+                <input asp-for="NatCode" class="form-control" />
+                <span asp-validation-for="NatCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CptNumero" class="control-label"></label>
+                <select asp-for="CptNumero" class ="form-control" asp-items="ViewBag.CptNumero"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrdCode" class="control-label"></label>
+                <select asp-for="OrdCode" class ="form-control" asp-items="ViewBag.OrdCode"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

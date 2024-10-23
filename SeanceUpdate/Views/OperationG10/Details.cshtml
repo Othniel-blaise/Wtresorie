@@ -1,0 +1,84 @@
+﻿@model SeanceUpdate.Models.OperationG10
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>OperationG10</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OperDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OperDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OperLibelle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OperLibelle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OperMontDebit)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OperMontDebit)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OperMontCredit)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OperMontCredit)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OperSolde)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OperSolde)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OperBeneficiaire)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OperBeneficiaire)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OperExecutant)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OperExecutant)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OperObserva)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OperObserva)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NatCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NatCode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Compte)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Compte.CptDesignation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ordonateur)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ordonateur.OrdNom)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.OperRef">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
